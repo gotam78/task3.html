@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image with Tooltip</title>
+<style>
+    .image-container {
+        position: relative;
+        display: inline-block;
+        border: 3px solid black;
+    }
+
+    .image-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .image-container .tooltip {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .image-container:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+    <img src="photos.png" alt="Image" />
+    <div style="color: blue;" class="tooltip">I am Image in Webpage</div>
+</div>
+
+</body>
+</html>
